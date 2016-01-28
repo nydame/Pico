@@ -40,6 +40,7 @@ Download [composer][] and run it with the `install` option:
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar install
 ```
+If the curl command doesn't work, download composer.phar to your local machine via [Packagist](https://packagist.org). If you're working on a remote server, simply upload it with the `scp` command.
 
 Upgrade
 -------
@@ -59,7 +60,7 @@ Upgrading Pico 0.8 or 0.9 to Pico 1.0 is a special case. The new `PicoDeprecated
 Run
 ---
 
-You have nothing to consider specially, simply navigate to your Pico install using your favorite web browser. Pico's default contents will explain how to use your brand new, stupidly simple, blazing fast, flat file CMS.
+You have nothing to consider specially, simply navigate to your Pico install using your favorite web browser. (In some cases, you may need to restart your server software.) Pico's default contents will explain how to use your brand new, stupidly simple, blazing fast, flat file CMS.
 
 #### You don't have a web server?
 Starting with PHP 5.4 the easiest way to try Pico is using [the built-in web server of PHP][PHPServer]. Please note that PHPs built-in web server is for development and testing purposes only!
