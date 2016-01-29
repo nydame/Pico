@@ -217,7 +217,7 @@ blockquote {
 }
 
 #header {
-    background: #2EAE9B;
+    background: #333355; /*was #2eae9b*/
     padding: 60px 0;
     margin-bottom: 80px;
     color: #afe1da;
