@@ -1,5 +1,5 @@
 ---
-Title: Welcome
+Title: Pico Instructions
 Description: Pico is a stupidly simple, blazing fast, flat file CMS.
 ---
 
