@@ -77,6 +77,14 @@ abstract class AbstractPicoPlugin implements PicoPluginInterface
                 $pluginConfig = $this->getConfig(get_called_class());
                 if (is_array($pluginConfig) && isset($pluginConfig['enabled'])) {
                     $this->setEnabled($pluginConfig['enabled']);
+                } elseif ($this->enabled) {
+                    // make sure dependencies are already fulfilled,
+                    // otherwise the plugin needs to be enabled manually
+                    try {
+                        $this->checkDependencies(false);
+                    } catch (RuntimeException $e) {
+                        $this->enabled = false;
+                    }
                 }
             }
         }
@@ -162,7 +170,7 @@ abstract class AbstractPicoPlugin implements PicoPluginInterface
                 $plugin = $this->getPlugin($pluginName);
             } catch (RuntimeException $e) {
                 throw new RuntimeException(
-                    "Unable to enable plugin '" . get_called_class() . "':"
+                    "Unable to enable plugin '" . get_called_class() . "': "
                     . "Required plugin '" . $pluginName . "' not found"
                 );
             }
@@ -174,13 +182,13 @@ abstract class AbstractPicoPlugin implements PicoPluginInterface
                         $plugin->setEnabled(true, true, true);
                     } else {
                         throw new RuntimeException(
-                            "Unable to enable plugin '" . get_called_class() . "':"
+                            "Unable to enable plugin '" . get_called_class() . "': "
                             . "Required plugin '" . $pluginName . "' was disabled manually"
                         );
                     }
                 } else {
                     throw new RuntimeException(
-                        "Unable to enable plugin '" . get_called_class() . "':"
+                        "Unable to enable plugin '" . get_called_class() . "': "
                         . "Required plugin '" . $pluginName . "' is disabled"
                     );
                 }

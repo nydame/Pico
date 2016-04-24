@@ -298,7 +298,8 @@ class Pico
         // load raw file content
         $this->triggerEvent('onContentLoading', array(&$this->requestFile));
 
-        if (file_exists($this->requestFile)) {
+        $notFoundFile = '404' . $this->getConfig('content_ext');
+        if (file_exists($this->requestFile) && (basename($this->requestFile) !== $notFoundFile)) {
             $this->rawContent = $this->loadFileContent($this->requestFile);
         } else {
             $this->triggerEvent('on404ContentLoading', array(&$this->requestFile));
@@ -498,7 +499,7 @@ class Pico
             // explicitly set a default timezone to prevent a E_NOTICE
             // when no timezone is set; the `date_default_timezone_get()`
             // function always returns a timezone, at least UTC
-            $this->config['timezone'] = date_default_timezone_get();
+            $this->config['timezone'] = @date_default_timezone_get();
         }
         date_default_timezone_set($this->config['timezone']);
     }
@@ -687,18 +688,28 @@ class Pico
      */
     public function load404Content($file)
     {
-        $errorFileDir = substr($file, strlen($this->getConfig('content_dir')));
-        do {
-            $errorFileDir = dirname($errorFileDir);
-            $errorFile = $errorFileDir . '/404' . $this->getConfig('content_ext');
-        } while (!file_exists($this->getConfig('content_dir') . $errorFile) && ($errorFileDir !== '.'));
+        $contentDir = $this->getConfig('content_dir');
+        $contentDirLength = strlen($contentDir);
 
-        if (!file_exists($this->getConfig('content_dir') . $errorFile)) {
-            $errorFile = ($errorFileDir === '.') ? '404' . $this->getConfig('content_ext') : $errorFile;
-            throw new RuntimeException('Required "' . $this->getConfig('content_dir') . $errorFile . '" not found');
+        if (substr($file, 0, $contentDirLength) === $contentDir) {
+            $errorFileDir = substr($file, $contentDirLength);
+
+            while ($errorFileDir !== '.') {
+                $errorFileDir = dirname($errorFileDir);
+                $errorFile = $errorFileDir . '/404' . $this->getConfig('content_ext');
+
+                if (file_exists($this->getConfig('content_dir') . $errorFile)) {
+                    return $this->loadFileContent($this->getConfig('content_dir') . $errorFile);
+                }
+            }
+        } elseif (file_exists($this->getConfig('content_dir') . '404' . $this->getConfig('content_ext'))) {
+            // provided that the requested file is not in the regular
+            // content directory, fallback to Pico's global `404.md`
+            return $this->loadFileContent($this->getConfig('content_dir') . '404' . $this->getConfig('content_ext'));
         }
 
-        return $this->loadFileContent($this->getConfig('content_dir') . $errorFile);
+        $errorFile = $this->getConfig('content_dir') . '404' . $this->getConfig('content_ext');
+        throw new RuntimeException('Required "' . $errorFile . '" not found');
     }
 
     /**
@@ -781,7 +792,17 @@ class Pico
             }
 
             if (!empty($meta['date'])) {
-                $meta['time'] = strtotime($meta['date']);
+                // workaround for issue #336
+                // Symfony YAML interprets ISO-8601 datetime strings and returns timestamps instead of the string
+                // this behavior conforms to the YAML standard, i.e. this is no bug of Symfony YAML
+                if (is_int($meta['date'])) {
+                    $meta['time'] = $meta['date'];
+
+                    $rawDateFormat = (date('H:i:s', $meta['time']) === '00:00:00') ? 'Y-m-d' : 'Y-m-d H:i:s';
+                    $meta['date'] = date($rawDateFormat, $meta['time']);
+                } else {
+                    $meta['time'] = strtotime($meta['date']);
+                }
                 $meta['date_formatted'] = utf8_encode(strftime($this->getConfig('date_format'), $meta['time']));
             } else {
                 $meta['time'] = $meta['date_formatted'] = '';
@@ -1060,8 +1081,16 @@ class Pico
         $pageIds = array_keys($this->pages);
 
         $contentDir = $this->getConfig('content_dir');
+        $contentDirLength = strlen($contentDir);
+
+        // the requested file is not in the regular content directory, therefore its ID
+        // isn't specified and it's impossible to determine the current page automatically
+        if (substr($this->requestFile, 0, $contentDirLength) !== $contentDir) {
+            return;
+        }
+
         $contentExt = $this->getConfig('content_ext');
-        $currentPageId = substr($this->requestFile, strlen($contentDir), -strlen($contentExt));
+        $currentPageId = substr($this->requestFile, $contentDirLength, -strlen($contentExt));
         $currentPageIndex = array_search($currentPageId, $pageIds);
         if ($currentPageIndex !== false) {
             $this->currentPage = &$this->pages[$currentPageId];
@@ -1122,8 +1151,8 @@ class Pico
     /**
      * Registers the twig template engine
      *
-     * This method also registers Picos core Twig filters `link` and `content`
-     * as well as Picos {@link PicoTwigExtension} Twig extension.
+     * This method also registers Pico's core Twig filters `link` and `content`
+     * as well as Pico's {@link PicoTwigExtension} Twig extension.
      *
      * @see    Pico::getTwig()
      * @return void
@@ -1209,11 +1238,12 @@ class Pico
         }
 
         $protocol = 'http';
-        if (!empty($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] !== 'off')) {
+        if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+            $secureProxyHeader = strtolower(current(explode(',', $_SERVER['HTTP_X_FORWARDED_PROTO'])));
+            $protocol = in_array($secureProxyHeader, array('https', 'on', 'ssl', '1')) ? 'https' : 'http';
+        } elseif (!empty($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] !== 'off')) {
             $protocol = 'https';
         } elseif ($_SERVER['SERVER_PORT'] == 443) {
-            $protocol = 'https';
-        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')) {
             $protocol = 'https';
         }
 

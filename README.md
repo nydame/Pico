@@ -4,7 +4,7 @@ Pico
 [![License](https://picocms.github.io/Pico/badges/pico-license.svg)](https://github.com/picocms/Pico/blob/master/LICENSE.md)
 [![Version](https://picocms.github.io/Pico/badges/pico-version.svg)](https://github.com/picocms/Pico/releases/latest)
 [![Build Status](https://api.travis-ci.org/picocms/Pico.svg)](https://travis-ci.org/picocms/Pico)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/theshka/Pico/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/theshka/Pico/?branch=master)
+[![Freenode IRC Webchat](https://picocms.github.io/Pico/badges/pico-chat.svg)](https://webchat.freenode.net/?channels=%23picocms)
 [![Tweet Button](https://cloud.githubusercontent.com/assets/640217/11483728/b0842918-976f-11e5-9185-d53261b3125b.png)](https://twitter.com/intent/tweet?text=Pico+is+a+stupidly+simple%2C+blazing+fast%2C+flat+file+CMS.+Visit+http%3A%2F%2Fpicocms.org+and+downlaod+%23picocms+today%21+via+%40gitpicocms&amp;related=gitpicocms)
 
 Pico is a stupidly simple, blazing fast, flat file CMS. See http://picocms.org/ for more info.
@@ -86,9 +86,9 @@ If you want to get started using Pico, please refer to our [user docs][HelpUserD
 If you're a developer, please refer to the "Contributing" section below and our [contribution guidelines][ContributionGuidelines]. To get you started with creating a plugin or theme, please read the [dev docs on our website][HelpDevDocs].
 
 #### You still need help or experience a problem with Pico?
-When the docs can't answer your question or when you're experiencing problems with Pico, please don't hesitate to create a new [Issue][Issues] on GitHub. Concerning problems with plugins or themes, please refer to the website of the developer of this plugin or theme.
+When the docs can't answer your question, you can get help by joining us on [#picocms on Freenode IRC](https://webchat.freenode.net/?channels=%23picocms). When you're experiencing problems with Pico, please don't hesitate to create a new [Issue][Issues] on GitHub. Concerning problems with plugins or themes, please refer to the website of the developer of this plugin or theme.
 
-**Before creating a new Issue,** please make sure the problem wasn't reported yet using [GitHubs search engine][IssuesSearch]. Please describe your issue as clear as possible and always include steps to reproduce the problem.
+**Before creating a new Issue,** please make sure the problem wasn't reported yet using [GitHubs search engine][IssuesSearch]. Please describe your issue as clear as possible and always include the *Pico version* you're using. Provided that you're using *plugins*, include a list of them too. We need information about the *actual and expected behavior*, the *steps to reproduce* the problem, and what steps you have taken to resolve the problem by yourself (i.e. *your own troubleshooting*).
 
 Contributing
 ------------

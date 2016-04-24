@@ -77,7 +77,8 @@ your assets there. You can then access them in your markdown using
 
 ### Text File Markup
 
-Text files are marked up using [Markdown][]. They can also contain regular HTML.
+Text files are marked up using [Markdown][] and [Markdown Extra][MarkdownExtra].
+They can also contain regular HTML.
 
 At the top of text files you can place a block comment and specify certain meta
 attributes of the page using [YAML][] (the "YAML header"). For example:
@@ -134,10 +135,10 @@ something like the following:
         {% endif %}
     {% endfor %}
    ```
-4. Make sure to exclude the blog articles from your page navigation. You can
-   achieve this by adding `{% if not page starts with "blog/" %}...{% endif %}`
+4. Make sure to exclude blog articles from your page navigation. You can achieve
+   this by adding `{% if not (page.id starts with "blog/") %}...{% endif %}`
    to the navigation loop (`{% for page in pages %}...{% endfor %}`) in your
-   themes `index.twig`.
+   theme's `index.twig`.
 
 ## Customization
 
@@ -283,13 +284,13 @@ still shows no rewritten URLs, force URL rewriting by setting
 `$config['rewrite_url'] = true;` in your `config/config.php`.
 
 If you're using Nginx, you can use the following configuration to enable
-URL rewriting. Don't forget to adjust the path (`/pico/`; line `1` and `4`)
+URL rewriting. Don't forget to adjust the path (`/pico`; line `1` and `4`)
 to match your installation directory. You can then enable URL rewriting by
 setting `$config['rewrite_url'] = true;` in your `config/config.php`.
 
-    location /pico/ {
+    location ~ ^/pico(.*) {
         index index.php;
-        try_files $uri $uri/ /pico/?$uri&$args;
+        try_files $uri $uri/ /pico/?$1&$args;
     }
 
 ## Documentation
@@ -297,6 +298,7 @@ setting `$config['rewrite_url'] = true;` in your `config/config.php`.
 For more help have a look at the Pico documentation at http://picocms.org/docs.
 
 [Markdown]: http://daringfireball.net/projects/markdown/syntax
+[MarkdownExtra]: https://michelf.ca/projects/php-markdown/extra/
 [YAML]: https://en.wikipedia.org/wiki/YAML
 [Twig]: http://twig.sensiolabs.org/documentation
 [WikiThemes]: https://github.com/picocms/Pico/wiki/Pico-Themes
