@@ -97,7 +97,7 @@ select:focus {
 body {
     font: 14px/1.62em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
     color: #444;
-    background: url('../../assets/hazy-water.jpeg') rgba(175,225,218, 0.25) top center;
+    background: url('../../assets/hazy-water.jpg') rgba(175,225,218, 0.25) top center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
@@ -270,7 +270,8 @@ dd {
     text-transform: lowercase;
 }
 .header-section-wrap {
-    background-color: rgba(175,225,218,0.05); /*based on #afe1da*/
+    background: rgba(175,225,218,0.25); /*based on #afe1da*/
+    background: linear-gradient(rgba(255,225,255,0.5), rgba(175,225,218,0.25));
     padding-bottom: 6.8em;
 }
 .main-intro {
@@ -288,7 +289,7 @@ aside {
     text-align: right;
 }
 #footer {
-    background: #707070;
+    background: #757090;
     color: #C0C0C0;
     font-family: "Ubuntu";
     padding: 4em 0;
