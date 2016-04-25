@@ -97,14 +97,10 @@ select:focus {
 body {
     font: 14px/1.62em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
     color: #444;
-    background: url('../../assets/hazy-water.jpeg') rgba(175,225,218, 0.05) top center;
+    background: url('../../assets/hazy-water.jpeg') rgba(175,225,218, 0.25) top center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
-}
-
-.header-section-wrap {
-    background-color: rgba(175,225,218,0.05);
 }
 
 a, a:visited {
@@ -273,11 +269,24 @@ dd {
 #logo {
     text-transform: lowercase;
 }
+.header-section-wrap {
+    background-color: rgba(175,225,218,0.05); /*based on #afe1da*/
+    padding-bottom: 6.8em;
+}
+.main-intro {
+    color: #fff;
+    font-size: 1.6em;
+}
+.main-intro span:nth-child(2) {
+    font-weight: bold;
+}
+aside {
+    color: #afe1da;
+}
 #footer {
     background: #707070;
     color: #C0C0C0;
     font-family: "Ubuntu";
-    margin-top: 6.8em;
     padding: 4em 0;
 }
 #footer a { color: #ddd; }
