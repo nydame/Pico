@@ -97,7 +97,7 @@ select:focus {
 body {
     font: 14px/1.8em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
     color: #444;
-    background: url('../../assets/hazy-water.jpeg;');
+    background: url('../../assets/hazy-water.jpeg');
     -webkit-font-smoothing: antialiased;
 }
 
