@@ -27,8 +27,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
     line-height: 1;
-    color: black;
-    background: url('/assets/hazy-water.jpeg;');
 }
 
 table {
@@ -99,7 +97,7 @@ select:focus {
 body {
     font: 14px/1.8em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
     color: #444;
-    background: #fff;
+    background: url('/assets/hazy-water.jpeg;');
     -webkit-font-smoothing: antialiased;
 }
 
