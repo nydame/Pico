@@ -98,6 +98,8 @@ body {
     font: 14px/1.8em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
     color: #444;
     background: url('../../assets/hazy-water.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-font-smoothing: antialiased;
 }
 
