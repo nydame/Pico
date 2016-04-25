@@ -28,7 +28,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
     line-height: 1;
     color: black;
-    background: url('assets/hazy-water.jpg;');
+    background: url('/assets/hazy-water.jpeg;');
 }
 
 table {
