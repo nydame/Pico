@@ -128,9 +128,9 @@ select:focus {
 /* Main Styles
 /*---------------------------------------------*/
 body {
-    font: 14px/1.8em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
+    font: 14px/1.62em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
     color: #444;
-    background: url('../../assets/hazy-water.jpeg');
+    background: url('../../assets/hazy-water.jpeg') rgba(175,225,218, 0.05) top center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
@@ -175,7 +175,7 @@ p, table, ol, ul, pre, blockquote, dl {
 }
 
 ol, ul {
-    padding-left: 30px;
+    padding-left: 2em;
 }
 
 b, strong {
@@ -229,14 +229,14 @@ code {
 
 pre {
     background: #eee;
-    padding: 20px;
+    padding: 1.7em;
     overflow: auto;
 }
 
 blockquote {
     font-style: italic;
-    margin-left: 15px;
-    padding-left: 10px;
+    margin-left: 1em;
+    padding-left: 0.7em;
     border-left: 5px solid #dddddd;
 }
 
@@ -256,8 +256,8 @@ dd {
     background: transparent;
     color: #afe1da;
     font-family: "Ubuntu";
-    margin-bottom: 80px;
-    padding: 60px 0;
+    margin-bottom: 6.8em;
+    padding: 2em 0 4em;
 }
 #header a {
     color: #afe1da;
@@ -286,7 +286,7 @@ dd {
 }
 #header nav a {
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 1.7em;
 }
 #header a:hover#menu-icon {
     background-color: #444;
@@ -299,12 +299,15 @@ dd {
     display: inline-block;
     float: left;
 }
+#logo {
+    text-transform: lowercase;
+}
 #footer {
     background: #707070;
     color: #C0C0C0;
     font-family: "Ubuntu";
-    margin-top: 80px;
-    padding: 60px 0;
+    margin-top: 6.8em;
+    padding: 4em 0;
 }
 #footer a { color: #ddd; }
 #footer a:hover { color: #fff; }
@@ -335,7 +338,7 @@ dd {
         width:100%;
     }
     #header {
-        margin-bottom: 40px;
+        margin-bottom: 3.4em;
     }
     #header h1 a {
         font-size:1em;
@@ -348,11 +351,11 @@ dd {
     #header nav ul, nav:active ul {
         display: none;
         position: absolute;
-        padding: 20px;
+        padding: 1.7em;
         background: #fff;
         border: 5px solid #444;
         right: 2.7em;
-        top: 100px;
+        top: 8.5em;
         width: 80%;
         border-radius: 4px 0 4px 4px;
         z-index: 9999;
@@ -377,7 +380,7 @@ dd {
         width:100%;
     }
     #header {
-        margin-bottom: 30px;
+        margin-bottom: 2em;
     }
     #header h1 a {
         font-size:1em;
@@ -390,18 +393,18 @@ dd {
     #header nav ul, nav:active ul {
         display: none;
         position: absolute;
-        padding: 20px;
+        padding: 1.7em;
         background: #fff;
         border: 5px solid #444;
         right: 0em;
-        top: 100px;
+        top: 8.5em;
         width: auto;
         border-radius: 4px 0 4px 4px;
     }
     #header nav li {
         text-align: center;
         width: 100%;
-        padding: 10px 0;
+        padding: 0.7em 0;
         margin: 0;
     }
     #header nav:hover ul {
