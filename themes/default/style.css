@@ -28,7 +28,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
     line-height: 1;
     color: black;
-    background: white;
+    background: url('assets/hazy-water.jpg;');
 }
 
 table {
@@ -220,7 +220,7 @@ dd {
 }
 
 #header {
-    background: #333355; /*was #2eae9b*/
+    background: transparent; /*fmb: was #2eae9b*/
     padding: 60px 0;
     margin-bottom: 80px;
     color: #afe1da;
