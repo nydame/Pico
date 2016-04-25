@@ -282,6 +282,10 @@ dd {
 }
 aside {
     color: #afe1da;
+    font-family: "Georgia", serif;
+    font-size: 3.2em;
+    line-height: 1.62;
+    text-align: right;
 }
 #footer {
     background: #707070;
