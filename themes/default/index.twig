@@ -19,31 +19,36 @@
 </head>
 <body>
 
-    <div class="header-section-wrap">
+    <div class="header-section1-wrap">
 
-        <header id="header">
+        <header id="site-header">
             <div class="inner clearfix">
                 <h1><a href="{{ "index"|link }}" id="logo">{{ site_title }}</a></h1>
-                <nav>
-                    <a href="#" class="menu-icon"></a>
-                    <ul>
-                        {% for page in pages if page.title %}
-                            <li{% if page.id == current_page.id %} class="active"{% endif %}>
-                                <a href="{{ page.url }}">{{ page.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
             </div>
         </header>
 
-        <section id="content">
+        <section class="site-intro">
             <div class="inner">
                 {{ content }}
             </div>
         </section>
 
     </div>
+
+    <div class="nav-section2-wrap" style="border:1px solid #c0c0c0;">
+        <nav>
+            <a href="#" class="menu-icon"></a>
+            <ul>
+                {% for page in pages if page.title %}
+                    <li{% if page.id == current_page.id %} class="active"{% endif %}>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <section class="content">articles go here</section>
+    </div>
+
 
     <footer id="footer">
         <div class="inner">

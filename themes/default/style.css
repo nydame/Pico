@@ -233,60 +233,60 @@ aside {
 .inner img {
     width: 100%;
 }
-#header {
+#site-header {
     background: transparent;
     color: #afe1da;
     font-family: "Ubuntu";
     margin-bottom: 2em;
     padding: 2em 0 0;
 }
-#header a {
+#site-header a {
     color: #afe1da;
     border-bottom: none;
 }
-#header h1 a {font-size: 1em;}
-#header h1 a,
-#header a:hover,
-#header .active a {
+#site-header h1 a {font-size: 1em;}
+#site-header h1 a,
+#site-header a:hover,
+#site-header .active a {
     border-bottom: none;
     color: #fff;
 }
-#header h1 {
+#site-header h1 {
     font-weight: bold;
     margin: 0;
     float: left;
 }
-#header .menu-icon {
+#site-header .menu-icon {
     display: inline-block;
     width: 35px;
     height: 35px;
     background: #afe1da url(menu-icon.png) center;
 }
-#header nav {
+#site-header nav {
     float: right;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-#header nav a {
+#site-header nav a {
     font-weight: bold;
     margin-left: 1.7em;
 }
-#header a:hover#menu-icon {
+#site-header a:hover#menu-icon {
     background-color: #444;
     border-radius: 4px 4px 0 0;
 }
-#header ul {
+#site-header ul {
     list-style: none;
 }
-#header li {
+#site-header li {
     display: inline-block;
     float: left;
 }
 #logo {
     text-transform: lowercase;
 }
-.header-section-wrap {
+.header-section1-wrap {
     background: rgba(175,225,218,0.25); /*based on #afe1da*/
     background: linear-gradient(rgba(255,225,255,0.5), rgba(175,225,218,0.25));
     padding-bottom: 6.8em;
@@ -333,9 +333,9 @@ aside {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    #header nav a { color: #000; }
-    #header nav a:hover { color: #afe1da; }
-    #header nav ul, nav:active ul {
+    #site-header nav a { color: #000; }
+    #site-header nav a:hover { color: #afe1da; }
+    #site-header nav ul, nav:active ul {
         display: none;
         position: absolute;
         padding: 1.7em;
@@ -347,22 +347,22 @@ aside {
         border-radius: 4px 0 4px 4px;
         z-index: 9999;
     }
-    #header nav li {
+    #site-header nav li {
         text-align: center;
         width: 100%;
         padding: 10px 0;
         margin: 0;
     }
-    #header nav:hover ul {
+    #site-header nav:hover ul {
         display: block;
     }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-    #header nav a { color: #000; }
-    #header nav a:hover { color: #afe1da; }
-    #header nav ul, nav:active ul {
+    #site-header nav a { color: #000; }
+    #site-header nav a:hover { color: #afe1da; }
+    #site-header nav ul, nav:active ul {
         display: none;
         position: absolute;
         padding: 1.7em;
@@ -373,19 +373,19 @@ aside {
         width: auto;
         border-radius: 4px 0 4px 4px;
     }
-    #header nav li {
+    #site-header nav li {
         text-align: center;
         width: 100%;
         padding: 0.7em 0;
         margin: 0;
     }
-    #header nav:hover ul {
+    #site-header nav:hover ul {
         display: block;
     }
 }
 
 @media only screen and (min-width: 500px) {
-    #header {
+    #site-header {
         margin-bottom: 3.4em;
     }
 }
@@ -399,14 +399,14 @@ aside {
 }
 
 @media only screen and (min-width: 800px) {
-    #header {
+    #site-header {
         margin-bottom: 6.8em;
         padding: 2em 0 4em;
     }
-    #header h1 a {
+    #site-header h1 a {
         font-size: 100%;
     }
-    #header .menu-icon {
+    #site-header .menu-icon {
         display: none;
     }
     .inner {
