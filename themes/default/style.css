@@ -214,6 +214,15 @@ dd {
     margin-left: 2em;
 }
 
+aside {
+    color: #afe1da;
+    font-family: "Georgia", serif;
+    font-size: 3.2em;
+    line-height: 1.62;
+    position: static;
+    text-align: right;
+}
+
 /* Structure Styles
 /*---------------------------------------------*/
 .inner {
@@ -289,16 +298,6 @@ dd {
 }
 .main-intro span:nth-child(2) {
     font-weight: bold;
-}
-aside {
-    bottom: 0;
-    color: #afe1da;
-    font-family: "Georgia", serif;
-    font-size: 3.2em;
-    line-height: 1.62;
-    position: absolute;
-    right: 2em;
-    text-align: right;
 }
 #footer {
     background: #757090;
@@ -388,6 +387,14 @@ aside {
 @media only screen and (min-width: 500px) {
     #header {
         margin-bottom: 3.4em;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    aside {
+        bottom: 0;
+        position: absolute;
+        right: 2em;
     }
 }
 
