@@ -231,10 +231,12 @@ dd {
 }
 #header a {
     color: #afe1da;
+    border-bottom: none;
 }
 #header h1 a,
 #header a:hover,
 #header .active a {
+    border-bottom: none;
     color: #fff;
 }
 #header h1 {
