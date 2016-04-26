@@ -406,10 +406,6 @@ aside {
 }
 
 @media only screen and (min-width: 800px) {
-    #site-header {
-        margin-bottom: 6.8em;
-        padding: 2em 0 4em;
-    }
     #site-header h1 a {
         font-size: 100%;
     }
