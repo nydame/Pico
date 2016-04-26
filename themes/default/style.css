@@ -104,6 +104,8 @@ body {
 }
 
 a, a:visited {
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
     color: #2EAE9B;
     text-decoration: none;
     -webkit-transition: all 0.2s linear;
@@ -114,6 +116,7 @@ a, a:visited {
 }
 
 a:hover, a:active {
+    border-bottom-style: solid;
     color: #000;
     text-decoration: none;
 }
@@ -294,8 +297,14 @@ aside {
     font-family: "Ubuntu";
     padding: 4em 0;
 }
-#footer a { color: #ddd; }
-#footer a:hover { color: #fff; }
+#footer a { 
+    color: #ddd;
+    border-bottom: 1px dotted #ddd;
+}
+#footer a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
 
 /* Misc Styles
 /*---------------------------------------------*/
