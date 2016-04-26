@@ -400,6 +400,9 @@ aside {
         position: absolute;
         right: 2em;
     }
+    .header-section1-wrap {
+        padding-bottom: 13.6em;
+    }
 }
 
 @media only screen and (min-width: 800px) {
