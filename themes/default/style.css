@@ -326,6 +326,7 @@ aside {
     border-bottom: 1px solid #fff;
 }
 #footer .inner {text-align: center;}
+#footer p:last-child {margin-bottom:0;}
 
 /* Misc Styles
 /*---------------------------------------------*/
