@@ -213,6 +213,7 @@ dd {
 
 aside {
     color: #afe1da;
+    color: hsl(171, 45%, 78%);
     font-family: "Georgia", serif;
     font-size: 3.2em;
     line-height: 1.62;
@@ -220,6 +221,18 @@ aside {
     position: static;
     text-align: right;
 }
+nav a {
+    background-color: #333;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0px #000;
+    color: #afe1da;
+    color: hsl(171, 45%, 78%);
+    font-weight: bold;
+    margin-left: 1.7em;
+    min-height: 50px;
+    min-width: 50px;
+}
+nav a:hover {color: #85e204; color: hsl(171, 62%, 70%);}
 
 /* Structure Styles
 /*---------------------------------------------*/
@@ -265,10 +278,6 @@ aside {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-#site-header nav a {
-    font-weight: bold;
-    margin-left: 1.7em;
 }
 #site-header a:hover#menu-icon {
     background-color: #444;
@@ -347,8 +356,6 @@ aside {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    #site-header nav a { color: #000; }
-    #site-header nav a:hover { color: #afe1da; }
     #site-header nav ul, nav:active ul {
         display: none;
         position: absolute;
@@ -374,8 +381,6 @@ aside {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-    #site-header nav a { color: #000; }
-    #site-header nav a:hover { color: #afe1da; }
     #site-header nav ul, nav:active ul {
         display: none;
         position: absolute;
