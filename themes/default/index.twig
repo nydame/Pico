@@ -37,16 +37,24 @@
 
     <div class="nav-section2-wrap clearfix" style="border:1px solid #c0c0c0;">
         <nav>
-            <a href="#" class="menu-icon"></a>
-            <ul>
-                {% for page in pages if page.title %}
-                    <li{% if page.id == current_page.id %} class="active"{% endif %}>
-                        <a href="{{ page.url }}">{{ page.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+            <div class="inner">
+                <a href="#" class="menu-icon"></a>
+                <ul>
+                    {% for page in pages if page.title %}
+                        <li{% if page.id == current_page.id %} class="active"{% endif %}>
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </nav>
-        <section class="content">articles go here</section>
+        <section class="content" role="main">
+            <div class="inner">
+                <article>About Me</article>
+                <article>My Work</article>
+                <article>Hire Me</article>
+            </div>
+        </section>
     </div>
 
 
