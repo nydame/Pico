@@ -338,6 +338,11 @@ nav a:hover {color: #85e204; color: hsl(171, 62%, 70%);}
 }
 #footer .inner {text-align: center;}
 #footer p:last-child {margin-bottom:0;}
+.inlinesvg .icon-text {display:none;}
+.inlinesvg .icon {
+    display: inline-block;
+    margin: 0 1em;
+}
 
 /* Misc Styles
 /*---------------------------------------------*/
