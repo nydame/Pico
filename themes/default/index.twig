@@ -112,6 +112,9 @@
         (function(){
             var menuItems = document.querySelectorAll('nav li');
             console.log(menuItems);
+            for (var i = menuItems.length; i > 0; i--) {
+                console.log(menuItems[i-1]);
+            };
             // menuItems is a Node List, not an array, so it has no forEach
             // but it does have a length!
             // for(var i = menuItems.length; i > 0; i--) {console.log("round " + menuItems.length - i + 1);
