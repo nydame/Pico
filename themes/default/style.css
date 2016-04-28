@@ -223,16 +223,21 @@ aside {
     position: static;
     text-align: right;
 }
-nav a {
+nav li {
     background-color: #333;
     border-radius: 50%;
     box-shadow: 5px 5px 0px #000;
-    color: #afe1da;
-    color: hsl(171, 45%, 78%);
-    font-weight: bold;
+    display: inline-block;
+    padding: 1em;
     margin-left: 1.7em;
     min-height: 50px;
     min-width: 50px;
+
+}
+nav a {
+    color: #afe1da;
+    color: hsl(171, 45%, 78%);
+    font-weight: bold;
 }
 nav a:hover {color: #85e204; color: hsl(171, 62%, 70%);}
 
