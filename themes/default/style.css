@@ -366,7 +366,8 @@ nav li.active {color: #85e204; color: hsl(171, 62%, 70%);}
 }
 #footer .icon:hover {
     fill: #fff;
-    margin-top: -0.2em;
+    transform: translateY(-0.5em);
+    transform-origin: center center;
 }
 #footer a.icon-link,
 #footer a.icon-link:hover {
