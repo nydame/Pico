@@ -17,7 +17,7 @@
 
     <script src="{{ theme_url }}/scripts/modernizr-2.6.1.min.js"></script>
 </head>
-<body class="body-welcome">
+<body class="body-page">
     <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <symbol id="icon-heart" viewBox="0 0 16 16">
@@ -43,21 +43,12 @@
         </defs>
     </svg>
 
-    <div class="header-section1-wrap clearfix">
 
-        <header id="site-header">
-            <div class="inner clearfix">
-                <h1><a href="{{ "index"|link }}" id="logo">{{ site_title }}</a></h1>
-            </div>
-        </header>
-
-        <section class="site-intro">
-            <div class="inner">
-                {{ content }}
-            </div>
-        </section>
-
-    </div>
+    <header id="site-header">
+        <div class="inner clearfix">
+            <h1><a href="{{ "index"|link }}" id="logo">{{ site_title }}</a></h1>
+        </div>
+    </header>
 
     <div class="nav-section2-wrap clearfix" style="border:1px solid #c0c0c0;">
         <nav>
@@ -74,9 +65,7 @@
         </nav>
         <section class="content" role="main">
             <div class="inner">
-                <article>About Me</article>
-                <article>My Work</article>
-                <article>Hire Me</article>
+                {{ content }}
             </div>
         </section>
     </div>

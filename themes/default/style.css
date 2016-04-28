@@ -336,7 +336,10 @@ nav a:hover {color: #85e204; color: hsl(171, 62%, 70%);}
     color: #fff;
     border-bottom: 1px solid #fff;
 }
-#footer .inner {text-align: center;}
+#footer .inner {
+    text-align: center;
+    transition: all ease-out 0.2s;
+}
 #footer p:last-child {margin-bottom:0;}
 .inlinesvg .icon-text {display:none;}
 #footer .icon {
@@ -350,6 +353,7 @@ nav a:hover {color: #85e204; color: hsl(171, 62%, 70%);}
 }
 #footer .icon:hover {
     fill: #fff;
+    margin-top: -0.2em;
 }
 #footer a.icon-link,
 #footer a.icon-link:hover {
