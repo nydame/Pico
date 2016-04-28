@@ -253,6 +253,7 @@ nav a:visited {
 }
 nav a:hover,
 nav li.active a {
+    border-bottom-style: solid;
     color: #27a592;
     color: hsl(171, 62%, 40%);
 }
@@ -401,55 +402,6 @@ nav li.active a {
 
 /* Media Queries
 /*---------------------------------------------*/
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-/*    #site-header nav ul, nav:active ul {
-        display: none;
-        position: absolute;
-        padding: 1.7em;
-        background: #fff;
-        border: 5px solid #444;
-        right: 2.7em;
-        top: 8.5em;
-        width: 80%;
-        border-radius: 4px 0 4px 4px;
-        z-index: 9999;
-    }
-    #site-header nav li {
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
-        margin: 0;
-    }
-    #site-header nav:hover ul {
-        display: block;
-    }*/
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-/*    #site-header nav ul, nav:active ul {
-        display: none;
-        position: absolute;
-        padding: 1.7em;
-        background: #fff;
-        border: 5px solid #444;
-        right: 0em;
-        top: 8.5em;
-        width: auto;
-        border-radius: 4px 0 4px 4px;
-    }
-    #site-header nav li {
-        text-align: center;
-        width: 100%;
-        padding: 0.7em 0;
-        margin: 0;
-    }
-    #site-header nav:hover ul {
-        display: block;
-    }*/
-}
 
 @media only screen and (min-width: 500px) {
     #site-header {
