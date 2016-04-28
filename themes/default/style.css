@@ -404,7 +404,7 @@ nav li.active a {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    #site-header nav ul, nav:active ul {
+/*    #site-header nav ul, nav:active ul {
         display: none;
         position: absolute;
         padding: 1.7em;
@@ -424,12 +424,12 @@ nav li.active a {
     }
     #site-header nav:hover ul {
         display: block;
-    }
+    }*/
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-    #site-header nav ul, nav:active ul {
+/*    #site-header nav ul, nav:active ul {
         display: none;
         position: absolute;
         padding: 1.7em;
@@ -448,7 +448,7 @@ nav li.active a {
     }
     #site-header nav:hover ul {
         display: block;
-    }
+    }*/
 }
 
 @media only screen and (min-width: 500px) {
