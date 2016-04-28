@@ -113,7 +113,7 @@
             var menuItems = document.querySelectorAll('nav li');
             // menuItems is a Node List, not an array, so it has no forEach
             // but it does have a length!
-            for (var i = menuItems.length; i >; i--) {
+            for (var i = menuItems.length; i >0; i--) {
                 console.log( i + ") " + this);
                 menuItems[i-1].addEventListener( 'mouseover', function() {
                     //
