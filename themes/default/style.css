@@ -341,7 +341,9 @@ nav a:hover {color: #85e204; color: hsl(171, 62%, 70%);}
 .inlinesvg .icon-text {display:none;}
 #footer .icon {
     display: inline-block;
+    height: 2em;
     margin: 0 1em;
+    max-height: 2em;
     max-width: 2em;
     width: 2em;
 }
