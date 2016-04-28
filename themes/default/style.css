@@ -237,7 +237,8 @@ nav li {
 nav li:first-child {
     margin-left: 0;
 }
-nav a {
+nav a,
+nav a:visited {
     color: #afe1da;
     color: hsl(171, 45%, 78%);
     font-weight: bold;
