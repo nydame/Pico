@@ -227,7 +227,6 @@ nav ul {padding-left: 0;}
 nav li {
     border-radius: 5%;
     box-shadow: 5px 5px 0px #afe1da;
-    box-shadow-color: hsl(171, 45%, 78%);
     display: inline-block;
     padding: 1em;
     margin-left: 0.1em;
@@ -244,7 +243,10 @@ nav a {
     font-weight: bold;
 }
 nav a:hover,
-nav li.active {color: #85e204; color: hsl(171, 62%, 70%);}
+nav li.active a {/*color: #85e204; color: hsl(171, 62%, 70%);*/
+    color: #85e204;
+    color: hsl(171, 62%, 70%);
+}
 
 /* Structure Styles
 /*---------------------------------------------*/
