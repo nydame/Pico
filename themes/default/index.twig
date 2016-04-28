@@ -116,7 +116,7 @@
             for ( var i = menuItems.length; i >0; i-- ) {console.log("round " + menuItems.length - i + 1);
 
                 var currentItem = this,
-                    node1 = currentItem.firstChild;
+                    node1 = this.firstChild;
                 console.log(node1);
                 // remove mysterious text
                 while ( node1 && node1.nodeType === Node.TEXT_NODE ) {
