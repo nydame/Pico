@@ -114,14 +114,24 @@
             // menuItems is a Node List, not an array, so it has no forEach
             // but it does have a length!
             for (var i = menuItems.length; i >0; i--) {
-                console.log(menuItems[i-1]);
                 menuItems[i-1].addEventListener( 'mouseover', function() {
-                    //
+                    console.log(this);
+                    console.log(this.firstChild);
+                    simulateEvent(this.firstChild, 'mouseover');
                 } );
                 menuItems[i-1].addEventListener( 'mouseleave', function() {
-                    //
+                    simulateEvent(this.firstChild, 'mouseleave');
                 } );
             };
+
+            function simulateEvent( node, event ) {
+                var newEvent = new MouseEvent(event, {
+                    'view': window,
+                    'bubbles': false, // avoid infinite loop
+                    'cancelable': true
+                });
+                node.dispatchEvent(newEvent);
+            }
         })();
     </script>
 
