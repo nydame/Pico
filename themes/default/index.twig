@@ -111,26 +111,27 @@
     <script>
         (function(){
             var menuItems = document.querySelectorAll('nav li');
+            console.log(menuItems);
             // menuItems is a Node List, not an array, so it has no forEach
             // but it does have a length!
-            for(var i = menuItems.length; i > 0; i--) {console.log("round " + menuItems.length - i + 1);
+            // for(var i = menuItems.length; i > 0; i--) {console.log("round " + menuItems.length - i + 1);
 
-                var currentItem = menuItems[i-1],
-                    node1 = currentItem.firstChild;
-                console.log(node1);
-                // remove mysterious text
-                while ( node1 && node1.nodeType === Node.TEXT_NODE ) {
-                    node1.remove();
-                    node1 = currentItem.firstChild;
-                    console.log(node1);
-                }
-                menuItems[i-1].addEventListener( 'mouseover', function() {
-                    simulateEvent(node1, 'mouseover');
-                } );
-                menuItems[i-1].addEventListener( 'mouseleave', function() {
-                    simulateEvent(node1, 'mouseleave');
-                } );
-            }
+            //     var currentItem = menuItems[i-1],
+            //         node1 = currentItem.firstChild;
+            //     console.log(node1);
+            //     // remove mysterious text
+            //     while ( node1 && node1.nodeType === Node.TEXT_NODE ) {
+            //         node1.remove();
+            //         node1 = currentItem.firstChild;
+            //         console.log(node1);
+            //     }
+            //     menuItems[i-1].addEventListener( 'mouseover', function() {
+            //         simulateEvent(node1, 'mouseover');
+            //     } );
+            //     menuItems[i-1].addEventListener( 'mouseleave', function() {
+            //         simulateEvent(node1, 'mouseleave');
+            //     } );
+            // }
 
             function simulateEvent( node, event ) {
                 var newEvent = new MouseEvent(event, {
