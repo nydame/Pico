@@ -223,7 +223,10 @@ aside {
     position: static;
     text-align: right;
 }
-nav ul {padding-left: 0;}
+nav ul {
+    padding-left: 0;
+    text-align: right;
+}
 nav li {
     border-radius: 5%;
     box-shadow: 5px 5px 0px #afe1da;
@@ -244,9 +247,9 @@ nav a:visited {
     font-weight: bold;
 }
 nav a:hover,
-nav li.active a {/*color: #85e204; color: hsl(171, 62%, 70%);*/
-    color: #85e204;
-    color: hsl(171, 62%, 70%);
+nav li.active a {
+    color: #27a592;
+    color: hsl(171, 62%, 40%);
 }
 
 /* Structure Styles

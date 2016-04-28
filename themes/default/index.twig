@@ -63,7 +63,7 @@
         <nav>
             <div class="inner">
                 <a href="#" class="menu-icon"></a>
-                <ul>
+                <ul class="clearfix">
                     {% for page in pages if page.title %}
                         <li{% if page.id == current_page.id %} class="active"{% endif %}>
                             <a href="{{ page.url }}">{{ page.title }}</a>
