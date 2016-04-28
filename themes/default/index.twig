@@ -113,7 +113,7 @@
             var menuItems = document.querySelectorAll('nav li');
             // menuItems is a Node List, not an array, so it has no forEach
             // but it does have a length!
-            for ( var i = menuItems.length; i > 0; i--; ) {console.log("round " + menuItems.length - i + 1);
+            for(var i = menuItems.length; i > 0; i--) {console.log("round " + menuItems.length - i + 1);
 
                 var currentItem = menuItems[i-1],
                     node1 = currentItem.firstChild;
@@ -130,7 +130,7 @@
                 menuItems[i-1].addEventListener( 'mouseleave', function() {
                     simulateEvent(node1, 'mouseleave');
                 } );
-            };
+            }
 
             function simulateEvent( node, event ) {
                 var newEvent = new MouseEvent(event, {
