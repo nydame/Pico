@@ -118,7 +118,7 @@
                 currentItem = menuItems[i-1];
                 // get first child node that is not text
                 node1 = getFirstNonTextChild(currentItem);
-                console.log(node1);
+
                 simulateMultipleEvents( currentItem, node1, eventArr );
                 
             };
@@ -132,8 +132,17 @@
                 return child;
             }
 
-            function simulateEvent( aNode, anEvent ) {
-                aNode.dispatchEvent(anEvent);
+            function simulateEvent( target, eventString ) {
+                // var newEvent = new MouseEvent(eventString, {
+                //     'view': window,
+                //     'bubbles': false, // avoid infinite loop
+                //     'cancelable': true
+                // });
+                var newEvent = new MouseEvent('eventString'),
+                    cancelled;
+                cancelled = !target.dispatchEvent(newEvent);
+                console.log(target);
+                console.log("event dispatched? " + !cancelled);
             }
 
             function simulateMultipleEvents( parent, child, arrOfEvents ) {
