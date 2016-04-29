@@ -6,6 +6,10 @@ Date: 2016/04/24
 Template: page
 ---
 
-<div class="hire-wrap">
-    <p>Hire me.</p>
-</div>
+<section class="content">
+    <div class="inner">
+        <div class="hire-wrap">
+            <h2>Hire Me</h2>
+        </div>
+    </div>
+</section>

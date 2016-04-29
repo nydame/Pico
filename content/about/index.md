@@ -6,6 +6,10 @@ Date: 2016/04/22
 Template: page
 ---
 
-<div class="about-wrap">
-    <p>Just enough information about FWS.</p>
-</div>
+<section class="content">
+    <div class="inner">
+        <div class="about-wrap">
+            <h2>Just Enough Information About FWS</h2>
+        </div>
+    </div>
+</section>

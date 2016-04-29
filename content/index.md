@@ -6,10 +6,10 @@ Date: 2016/04/20
 Template: index
 ---
 
-<div class="welcome-wrap">
-    <p class="main-intro">
-        <span>On the web there are no roads.</span>
-        <span>You&nbsp;can&nbsp;go&nbsp;anywhere.</span>
-    </p>
-    <aside>But what if you need a guide?</aside>
-</div>
+<section class="content">
+	<div class="inner">
+		<div class="welcome-wrap">
+			<h2>Case Studies</h2>
+		</div>
+	</div>
+</section>
