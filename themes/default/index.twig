@@ -132,13 +132,8 @@
                 return child;
             }
 
-            function simulateEvent( node, event ) {
-                var newEvent = new MouseEvent(event, {
-                    'view': window,
-                    'bubbles': false, // avoid infinite loop
-                    'cancelable': true
-                });
-                node.dispatchEvent(newEvent);
+            function simulateEvent( aNode, anEvent ) {
+                aNode.dispatchEvent(anEvent);
             }
 
             function simulateMultipleEvents( parent, child, arrOfEvents ) {
