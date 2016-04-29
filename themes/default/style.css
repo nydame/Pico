@@ -252,6 +252,7 @@ nav a:visited {
     font-weight: bold;
 }
 nav a:hover,
+nav a.fake-hover,
 nav li.active a {
     border-bottom-style: solid;
     color: #27a592;
