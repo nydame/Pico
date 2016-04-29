@@ -110,24 +110,27 @@
 
     <script>
         (function(){
-            var menuItems = document.querySelectorAll('nav li'),
+            var eventArr = ['click', 'mouseover', 'mouseout', 'mouseenter', 'mouseleave'],
+                menuItems = document.querySelectorAll('nav li'),
                 currentItem, node1;
             for (var i = menuItems.length; i > 0; i--) {
+                // get current menu item
                 currentItem = menuItems[i-1];
-                node1 = currentItem.firstChild;
-                while( node1 && node1.nodeType === Node.TEXT_NODE ) {
-                    currentItem.removeChild(node1);
-                    node1 = currentItem.firstChild;
-                }
+                // get first child node that is not text
+                node1 = getFirstNonTextChild(currentItem);
                 console.log(node1);
-                menuItems[i-1].addEventListener( 'mouseover', function() {
-                    simulateEvent(node1, 'mouseover');
-                } );
-                menuItems[i-1].addEventListener( 'mouseleave', function() {
-                    simulateEvent(node1, 'mouseleave');
-                } );
+                simulateMultipleEvents( currentItem, node1, eventArr );
                 
             };
+
+            function getFirstNonTextChild( parent ) {
+                var child = parent.firstChild;
+                while ( child && child.nodeType === Node.TEXT_NODE ) {
+                    parent.removeChild(child);
+                    child = parent.firstChild;
+                }
+                return child;
+            }
 
             function simulateEvent( node, event ) {
                 var newEvent = new MouseEvent(event, {
@@ -137,6 +140,15 @@
                 });
                 node.dispatchEvent(newEvent);
             }
+
+            function simulateMultipleEvents( parent, child, arrOfEvents ) {
+                for (ev in arrOfEvents) {
+                    parent.addEventListener(ev, function() {
+                        simulateEvent( child, ev );
+                    });
+                }
+            }
+
         })();
     </script>
 
