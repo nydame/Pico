@@ -137,6 +137,7 @@
             function listenAndPassClick( parent, child ) {
                 parent.addEventListener( 'click', function() {
                     simulateClick( child);
+                    child.classList.remove('fake-hover');
                 }, false);
             }
 
@@ -149,6 +150,7 @@
 
             function fakeHover ( parent, child ) {
                 parent.addEventListener( 'mouseenter', function() {
+                    child.classList.remove('fake-hover'); // just in case
                     child.classList.add('fake-hover');
                 });
                 parent.addEventListener( 'mouseleave', function() {
