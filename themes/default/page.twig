@@ -97,5 +97,56 @@
         </div>
     </footer>
 
+    <script>
+        (function(){
+            var eventArr = ['click', 'mouseenter', 'mouseleave'],
+                menuItems = document.querySelectorAll('nav li'),
+                currentItem, node1;
+            for (var i = menuItems.length; i > 0; i--) {
+                // get current menu item
+                currentItem = menuItems[i-1];
+                // get first child node that is not text
+                node1 = getFirstNonTextChild(currentItem);
+                // listen for events on current menu item
+                // and simulate them on child node
+                listenAndPassClick( currentItem, node1 );
+                fakeHover( currentItem, node1 );
+                
+            };
+
+            function getFirstNonTextChild( parent ) {
+                var child = parent.firstChild;
+                while ( child && child.nodeType === Node.TEXT_NODE ) {
+                    parent.removeChild(child);
+                    child = parent.firstChild;
+                }
+                return child;
+            }
+
+            function listenAndPassClick( parent, child ) {
+                parent.addEventListener( 'click', function() {
+                    simulateClick( child);
+                }, false);
+            }
+
+            function simulateClick( target ) {
+                var newEvent = new MouseEvent( 'click' ),
+                    cancelled;
+                cancelled = !target.dispatchEvent(newEvent);
+                // TODO: use cancelled to handle failure
+            }
+
+            function fakeHover ( parent, child ) {
+                parent.addEventListener( 'mouseenter', function() {
+                    child.classList.add('fake-hover');
+                });
+                parent.addEventListener( 'mouseleave', function() {
+                    child.classList.remove('fake-hover');
+                });
+            }
+
+        })();
+    </script>
+
 </body>
 </html>
