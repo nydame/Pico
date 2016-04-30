@@ -365,7 +365,8 @@ nav li.active a {
     top: 0;
 }
 .more-less {
-    background-color: #333;
+    background-color: transparent;
+    border-bottom: 1px solid currentColor;
     padding: 0.5em 1em;
     text-align: right;
 }
@@ -374,7 +375,13 @@ nav li.active a {
     border: 2px solid #757090;
     border-radius: 5%;
     cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0.5em;
     padding: 0.5em 1em;
+}
+.more-less [role="button"]:hover {
+    background-color: #757090;
+    color: #fff;
 }
 .more-less p {
     background-color: #fff;
