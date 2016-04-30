@@ -14,18 +14,23 @@ Template: index
             <p>Here are some of the solutions I've been honored to be able to provide for my clients. You can get a good idea of the kind of work I do by looking at some of these case studies.</p>
             <article class="case clearfix" data-case="1">
                 <h1>A Quick Fix with Out-of-the-Box Solutions</h1>
+                <p class="more-less">Read</p>
             </article>
             <article class="case clearfix" data-case="2">
                 <h1>An Innovative Approach to Resonsive Web Design</h1>
+                <p class="more-less">Read</p>
             </article>
             <article class="case clearfix" data-case="3">
                 <h1>A Staff Page with Layers of Information</h1>
+                <p class="more-less">Read</p>
             </article>
             <article class="case clearfix" data-case="4">
                 <h1>A Custom Plugin for a 'Drag-n-Drop' Theme</h1>
+                <p class="more-less">Read</p>
             </article>
             <article class="case clearfix" data-case="5">
                 <h1>A Performance Audit for a Busy NGO</h1>
+                <p class="more-less">Read</p>
             </article>
         </div>
     </div>
