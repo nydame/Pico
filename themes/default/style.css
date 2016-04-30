@@ -351,11 +351,13 @@ nav li.active a {
     padding: 2em 0 0;
 }
 .case {
-    padding-left: 3.4em;
+    padding: 0 0 2em 3.4em;
     position: relative;
 }
 .case::before {
+    background-color: #757090;
     border-radius: 5%;
+    color: #C0C0C0;
     content: attr(data-case);
     left: 0;
     padding: 0.7em 1em;
