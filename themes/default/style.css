@@ -458,17 +458,6 @@ nav li.active a {
 }
 
 @media only screen and (min-width: 700px) {
-    aside {
-        bottom: 0;
-        position: absolute;
-        right: 2em;
-    }
-    .header-section1-wrap {
-        padding-bottom: 13.6em;
-    }
-    nav ul {
-        text-align: right;
-    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -483,6 +472,17 @@ nav li.active a {
     }
     .inner img {
         width: auto;
+    }
+    aside {
+        bottom: 0;
+        position: absolute;
+        right: 2em;
+    }
+    .header-section1-wrap {
+        padding-bottom: 13.6em;
+    }
+    nav ul {
+        text-align: right;
     }
 
 }
