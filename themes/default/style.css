@@ -134,7 +134,8 @@ h2 {
     font-size: 1.7em;
 }
 
-h3 {
+h3,
+article h1 {
     font-size: 1.5em;
     margin-top: 2em;
 }
@@ -224,6 +225,7 @@ aside {
     text-align: right;
 }
 nav ul {
+    margin-bottom: 3.4em;
     padding-left: 0;
     text-align: center;
     transition: transform ease-out 0.2s;
@@ -347,6 +349,18 @@ nav li.active a {
 }
 .nav-section2-wrap {
     padding: 2em 0 0;
+}
+.case {
+    padding-left: 3.4em;
+    position: relative;
+}
+.case::before {
+    border-radius: 5%;
+    content: attr(data-case);
+    left: 0;
+    padding: 0.7em 1em;
+    position: absolute;
+    top: 0;
 }
 #footer {
     background: #757090;
