@@ -357,12 +357,29 @@ nav li.active a {
 .case::before {
     background-color: #757090;
     border-radius: 5%;
-    color: #C0C0C0;
+    color: #ddd;
     content: attr(data-case);
     left: 0;
-    padding: 0.7em 1em;
+    padding: 0.5em 1em;
     position: absolute;
     top: 0;
+}
+.more-less {
+    background-color: #333;
+    padding: 0.5em 1em;
+    text-align: right;
+}
+.more-less [role="button"] {
+    background-color: transparent;
+    border: 2px solid #757090;
+    border-radius: 5%;
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+.more-less p {
+    background-color: #fff;
+    color: #333;
+    text-align: left;
 }
 #footer {
     background: #757090;
