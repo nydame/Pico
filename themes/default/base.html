@@ -167,13 +167,8 @@
         })();
     </script>
 
-{% block page-specific-scripts %}
-<script>
-// ON-DEMAND LOADING OF ARTICLE CONTENT
-    (function() {
-        alert("I'm specific to the home page.");
-    })();
-</script>
+{% block page_specific_scripts %}
+    {# default is no content at all #}
 {% endblock %}
 
 </body>
