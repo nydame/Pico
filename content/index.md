@@ -16,35 +16,35 @@ Template: index
                 <h1>A Quick Fix with Out-of-the-Box Solutions</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
-                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                    <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
                 </div>
             </article>
             <article class="case" data-case="2">
                 <h1>A Custom WordPress Theme with an Innovative Approach to Responsive Web Design</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
-                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                    <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
                 </div>
             </article>
             <article class="case" data-case="3">
                 <h1>A Staff Page with Layered Information</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
-                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                    <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
                 </div>
             </article>
             <article class="case" data-case="4">
                 <h1>A Custom Plugin for a 'Drag-n-Drop' Theme</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
-                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                    <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
                 </div>
             </article>
             <article class="case" data-case="5">
                 <h1>A Performance Audit for a Busy NGO</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
-                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                    <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
                 </div>
             </article>
         </div>

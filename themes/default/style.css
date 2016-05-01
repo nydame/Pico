@@ -390,6 +390,7 @@ nav li.active a {
     color: #333;
     text-align: left;
 }
+.more-less p.loading {text-align: center;}
 #footer {
     background: #757090;
     color: #C0C0C0;
