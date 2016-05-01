@@ -21,44 +21,71 @@
 {% block page_specific_scripts %}
 <script>
     (function() {
-        var readButtons = document.querySelectorAll('.more-less [role="button"]');
+        var readButtons = document.querySelectorAll('.more-less [role="button"]'),
+            allParentDivs = document.querySelectorAll('more-less');
+
         for (var i = readButtons.length; i > 0; i--) {
             readButtons[i-1].addEventListener( 'click', function() {
-                // fetch case{ parent's data-casestudy number }.html
-                console.log(this.parentNode.parentNode.dataset.casestudy);
-                // var url = "themes/default/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html";
-                var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html";
-                makeReq( 'GET', url );
+                var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
+                    parentDiv = this.parentNode;
+                makeReq( 'GET', url, parentDiv );
 
             }, false );
         };
 
-        function makeReq( httpMethod, url ) {
+        function makeReq( httpMethod, url, aNode ) {
             var xhr = new XMLHttpRequest();
+            // tell xhr who the parent node is
+            xhr.pNode = aNode;
             xhr.addEventListener( 'progress', progressHandler );
             xhr.addEventListener( 'load', loadHandler );
             xhr.addEventListener( 'error', errorHandler );
             xhr.addEventListener( 'abort', abortHandler );
             xhr.open( httpMethod, url, true ); // true = asynch
-            xhr.send(); console.log(xhr);
+            xhr.send();
         }
 
+        // XHR EVENT HANDLERS
+
         function progressHandler(ev) {
-            // give .more-less additional class of "waiting"
+            var pNode = this.pNode;
             console.log("progress");
+            prepareParent( pNode );
         }
 
         function loadHandler(ev) {
+            var pNode = this.pNode;
             console.log("load");
-            console.log(this.responseText);
+            deactivateAll();
+            pNode.appendChild(responseText);
+            activateParent( pNode );
         }
 
         function errorHandler(ev) {
+            var pNode = this.pNode;
             console.log("error");
         }
 
         function abortHandler(ev) {
+            var pNode = this.pNode;
             console.log("abort");
+        }
+
+        // UTILITY FNS FOR IMPLEMENTING STATE CHANGES
+
+        function prepareParent( aNode ) {
+            aNode.classList.add('waiting');
+        }
+
+        function activateParent( aNode ) {
+            aNode.classList("active");
+        }
+
+        function deactivateAll() {
+            for (var i = allParentDivs.length; i >= 0; i--) {
+                allParentDivs[i-1].classList.remove("waiting");
+                allParentDivs[i-1].classList.remove("active");
+            };
         }
 
     })();
