@@ -372,6 +372,9 @@ nav li.active a {
     text-align: right;
     width: 110%;
 }
+.more-less.active {
+    background-color: #333;
+}
 .more-less [role="button"] {
     background-color: transparent;
     border: 2px solid #757090;
@@ -390,7 +393,11 @@ nav li.active a {
     color: #333;
     text-align: left;
 }
-.more-less p.loading {text-align: center;}
+.more-less p.loading {
+    display: none;
+    text-align: center;
+}
+.more-less.active p.loading {display: block;}
 .more-less p.loading img {
     max-width: 125px;
     width: 33%;
