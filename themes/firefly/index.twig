@@ -54,10 +54,11 @@
         }
 
         function loadHandler(ev) {
-            var pNode = this.pNode;
+            var pNode = this.pNode,
+                fragment = document.createDocumentFragment(this.responseText);
             console.log("load");
             deactivateAll();
-            pNode.appendChild(this.responseText);
+            pNode.appendChild(fragment);
             activateParent( pNode );
         }
 
