@@ -372,7 +372,8 @@ nav li.active a {
     text-align: right;
     width: 110%;
 }
-.more-less.active {
+.more-less.active,
+.more-less.waiting {
     background-color: #333;
 }
 .more-less [role="button"] {
@@ -397,7 +398,7 @@ nav li.active a {
     display: none;
     text-align: center;
 }
-.more-less.active p.loading {display: block;}
+.more-less.waiting p.loading {display: block;}
 .more-less p.loading img {
     max-width: 125px;
     width: 33%;
