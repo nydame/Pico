@@ -28,20 +28,22 @@
             readButtons[i-1].addEventListener( 'click', function() {
                 var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
                     parentDiv = this.parentNode;
-                alert("click!");
                 if ( parentDiv.classList.contains('active') ) {
                     // if "on" then turn "off"
                     deactivateAll(); 
+                    switchButtonText( this );
                 } else if ( parentDiv.classList.contains('loaded') ) {
                     // if not "on", but content is just hidden, hide others and show it
                     deactivateAll();
                     activateParent( parentDiv );
+                    switchButtonText( this );
                 } else if ( parentDiv.classList.contains('waiting') ) {
                     // virgin click being handled, so do nothing
                     return;
                 } else {
                     // virgin click!
                     makeReq( 'GET', url, parentDiv ); console.log("URL is " + url);
+                    switchButtonText( this );
                 }
 
             }, false );
@@ -110,6 +112,12 @@
                     allParentDivs[i-1].classList.remove("active");
                 }
             }
+        }
+
+        function switchButtonText( aNode ) {
+            var currentText = aNodde.innerHTML;
+            if ( currentText === 'Read' ) { aNode.innerHTML = 'X'; }
+            if ( currentText === 'X' ) { aNode.innerHTML = 'Read'; }
         }
 
     })();
