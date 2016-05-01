@@ -17,6 +17,7 @@ Template: index
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
+                    <div class="async"></div>
                 </div>
             </article>
             <article class="casestudy" data-casestudy="2">
@@ -24,6 +25,7 @@ Template: index
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
+                    <div class="async"></div>
                 </div>
             </article>
             <article class="casestudy" data-casestudy="3">
@@ -31,6 +33,7 @@ Template: index
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
+                    <div class="async"></div>
                 </div>
             </article>
             <article class="casestudy" data-casestudy="4">
@@ -38,6 +41,7 @@ Template: index
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
+                    <div class="async"></div>
                 </div>
             </article>
             <article class="casestudy" data-casestudy="5">
@@ -45,6 +49,7 @@ Template: index
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
+                    <div class="async"></div>
                 </div>
             </article>
         </div>

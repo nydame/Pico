@@ -45,7 +45,7 @@
         function makeReq( httpMethod, url, aNode ) {
             var xhr = new XMLHttpRequest();
             // tell xhr who the parent node is
-            xhr.pNode = aNode;
+            xhr.container = aNode;
             xhr.addEventListener( 'progress', progressHandler );
             xhr.addEventListener( 'load', loadHandler );
             xhr.addEventListener( 'error', errorHandler );
@@ -57,25 +57,30 @@
         // XHR EVENT HANDLERS
 
         function progressHandler(ev) {
-            var pNode = this.pNode;
+            var container = this.container;
             console.log("progress");
-            prepareParent( pNode );
+            prepareParent( container );
         }
 
         function loadHandler(ev) {
-            var pNode = this.pNode;
+            var container = this.container,
+                tempNodeList,
+                targetNode;
             deactivateAll();
-            pNode.innerHTML = pNode.innerHTML + this.responseText;
-            activateParent( pNode );
+            // find .async within container
+            tempNodeList = container.getElementsByClassName('async');
+            targetNode = tempNodeList[0]; console.log(targetNode);
+            targetNode.innerHTML = this.responseText;
+            activateParent( container );
         }
 
         function errorHandler(ev) {
-            var pNode = this.pNode;
+            var container = this.container;
             console.log("error");
         }
 
         function abortHandler(ev) {
-            var pNode = this.pNode;
+            var container = this.container;
             console.log("abort");
         }
 
