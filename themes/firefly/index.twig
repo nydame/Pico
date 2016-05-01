@@ -55,12 +55,9 @@
 
         function loadHandler(ev) {
             var pNode = this.pNode,
-                fragment = document.createDocumentFragment(this.responseText);
-            console.log("load " + this.responseText);
-            console.log(fragment);
+                content = document.createElement(this.responseText);
             deactivateAll();
-            pNode.appendChild(fragment);
-            console.log(pNode);
+            pNode.appendChild(content);
             activateParent( pNode );
         }
 
@@ -84,9 +81,8 @@
             aNode.classList.add("active");
         }
 
-        function deactivateAll() {console.log( "deactivating all" + allParentDivs.length );
+        function deactivateAll() {
             for (var i = allParentDivs.length; i > 0; i--) {
-                console.log("deactivating " + allParentDivs[i-1] );
                 if ( allParentDivs[i-1].classList.contains("waiting") ) {
                     allParentDivs[i-1].classList.remove("waiting");
                 }
