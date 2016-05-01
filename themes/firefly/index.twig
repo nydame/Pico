@@ -28,7 +28,15 @@
             readButtons[i-1].addEventListener( 'click', function() {
                 var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
                     parentDiv = this.parentNode;
-                makeReq( 'GET', url, parentDiv ); console.log("URL is " + url);
+                if ( parentDiv.classList.contains('active') ) {
+                    deactivateAll(); 
+                } else if ( parentDiv.classList.contains('loaded') ) {
+                    activateParent( parentDiv );
+                } else if ( parentDiv.classList.contains('waiting') ) {
+                    return;
+                } else {
+                    makeReq( 'GET', url, parentDiv ); console.log("URL is " + url);
+                }
 
             }, false );
         };
@@ -77,7 +85,8 @@
         }
 
         function activateParent( aNode ) {
-            aNode.classList.add("active");
+            // note that class "loaded" is never removed
+            aNode.classList.add("active loaded");
         }
 
         function deactivateAll() {
