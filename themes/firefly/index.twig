@@ -54,10 +54,9 @@
         }
 
         function loadHandler(ev) {
-            var pNode = this.pNode,
-                content = document.createElement(this.responseText);
+            var pNode = this.pNode;
             deactivateAll();
-            pNode.appendChild(content);
+            pNode.innerHTML = pNode.innerHTML + this.responseText;
             activateParent( pNode );
         }
 
