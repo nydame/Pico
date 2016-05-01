@@ -391,6 +391,10 @@ nav li.active a {
     text-align: left;
 }
 .more-less p.loading {text-align: center;}
+.more-less p.loading img {
+    max-width: 125px;
+    width: 33%;
+}
 #footer {
     background: #757090;
     color: #C0C0C0;
