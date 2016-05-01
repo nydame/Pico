@@ -26,21 +26,21 @@
             readButtons[i-1].addEventListener( 'click', function() {
                 // fetch case{ parent's data-casestudy number }.html
                 console.log(this.parentNode.parentNode.dataset.casestudy);
-                var xhr = new XMLHttpRequest(),
-                    url = "themes/default/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html"
-                ;
-                xhr.addEventListener( 'progress', progressHandler );
-                xhr.addEventListener( 'load', loadHandler );
-                xhr.addEventListener( 'error', errorHandler );
-                xhr.addEventListener( 'abort', abortHandler );
-                xhr.open('GET', url, true);
-                xhr.onreadystatechange = function(data) {
-                    //
-                }
-                xhr.send(); console.log(xhr);
+                var url = "themes/default/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html";
+                makeReq( 'GET', url );
 
             }, false );
         };
+
+        function makeReq( httpMethod, url ) {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener( 'progress', progressHandler );
+            xhr.addEventListener( 'load', loadHandler );
+            xhr.addEventListener( 'error', errorHandler );
+            xhr.addEventListener( 'abort', abortHandler );
+            xhr.open( httpMethod, url, true );
+            xhr.send(); console.log(xhr);
+        }
 
         function progressHandler(ev) {
             console.log("progress");
