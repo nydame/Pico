@@ -22,7 +22,7 @@
 <script>
     (function() {
         var readButtons = document.querySelectorAll('.more-less [role="button"]'),
-            parentDivs = document.querySelectorAll('more-less');
+            allParentDivs = document.querySelectorAll('more-less');
 
         for (var i = readButtons.length; i > 0; i--) {
             readButtons[i-1].addEventListener( 'click', function() {
@@ -56,7 +56,9 @@
         function loadHandler(ev) {
             var pNode = this.pNode;
             console.log("load");
-            console.log(this.responseText);
+            deactivateAll();
+            pNode.appendChild(responseText);
+            activateParent( pNode );
         }
 
         function errorHandler(ev) {
@@ -76,11 +78,14 @@
         }
 
         function activateParent( aNode ) {
-            //
+            aNode.classList("active");
         }
 
-        function deactivateAll( aNodeList ) {
-            //
+        function deactivateAll() {
+            for (var i = allParentDivs.length; i >= 0; i--) {
+                allParentDivs[i-1].classList.remove("waiting");
+                allParentDivs[i-1].classList.remove("active");
+            };
         }
 
     })();
