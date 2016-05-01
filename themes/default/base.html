@@ -114,9 +114,11 @@
         </div>
     </footer>
 
+    {% block page-specific-scripts %}{% endblock %}
+
     <script>
+    // NAVIGATION
         (function(){
-            var eventArr = ['click', 'mouseenter', 'mouseleave'],
                 menuItems = document.querySelectorAll('nav li'),
                 currentItem, node1;
             for (var i = menuItems.length; i > 0; i--) {
