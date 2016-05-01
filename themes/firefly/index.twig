@@ -82,7 +82,7 @@
         }
 
         function deactivateAll() {
-            for (var i = allParentDivs.length; i >= 0; i--) {
+            for (var i = allParentDivs.length; i > 0; i--) {
                 allParentDivs[i-1].classList.remove("waiting");
                 allParentDivs[i-1].classList.remove("active");
             };
