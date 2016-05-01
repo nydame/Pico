@@ -21,7 +21,13 @@
 {% block page_specific_scripts %}
 <script>
     (function() {
-        alert("I'm specific to the home page.");
+        var readButtons = document.querySelectorAll('.more-less [role="button"]');
+        for (var i = readButtons.length; i > 0; i--) {
+            readButtons[i-1].addEventListener( 'click', function() {
+                // fetch case{ parent's data-case }.html
+                console.log(this.parentNode.parentNode.dataset.casestudy);
+            }, false );
+        };
     })();
 </script>
 {% endblock %}
