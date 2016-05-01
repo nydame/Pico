@@ -22,13 +22,13 @@
 <script>
     (function() {
         var readButtons = document.querySelectorAll('.more-less [role="button"]'),
-            allParentDivs = document.querySelectorAll('more-less');
+            allParentDivs = document.querySelectorAll('.more-less');
 
         for (var i = readButtons.length; i > 0; i--) {
             readButtons[i-1].addEventListener( 'click', function() {
-                var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
+                var url = {{ theme_url }} + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
                     parentDiv = this.parentNode;
-                makeReq( 'GET', url, parentDiv );
+                makeReq( 'GET', url, parentDiv ); console.log("URL is " + url);
 
             }, false );
         };
@@ -56,9 +56,10 @@
         function loadHandler(ev) {
             var pNode = this.pNode,
                 fragment = document.createDocumentFragment(this.responseText);
-            console.log("load");
+            console.log("load " + this.responseText);
             deactivateAll();
             pNode.appendChild(fragment);
+            console.log(pNode);
             activateParent( pNode );
         }
 
@@ -82,11 +83,16 @@
             aNode.classList.add("active");
         }
 
-        function deactivateAll() {
+        function deactivateAll() {console.log( "deactivating all" + allParentDivs.length );
             for (var i = allParentDivs.length; i > 0; i--) {
-                allParentDivs[i-1].classList.remove("waiting");
-                allParentDivs[i-1].classList.remove("active");
-            };
+                console.log("deactivating " + allParentDivs[i-1] );
+                if ( allParentDivs[i-1].classList.contains("waiting") ) {
+                    allParentDivs[i-1].classList.remove("waiting");
+                }
+                if ( allParentDivs[i-1].classList.contains("active") ) {
+                    allParentDivs[i-1].classList.remove("active");
+                }
+            }
         }
 
     })();
