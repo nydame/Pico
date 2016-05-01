@@ -370,6 +370,7 @@ nav li.active a {
     margin-left: -3.4em;
     padding: 0.5em 1em;
     text-align: right;
+    transition: height ease-out 0.8s;
     width: 110%;
 }
 .more-less.active,
