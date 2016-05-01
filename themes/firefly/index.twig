@@ -57,6 +57,7 @@
             var pNode = this.pNode,
                 fragment = document.createDocumentFragment(this.responseText);
             console.log("load " + this.responseText);
+            console.log(fragment);
             deactivateAll();
             pNode.appendChild(fragment);
             console.log(pNode);
