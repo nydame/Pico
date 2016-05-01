@@ -14,23 +14,38 @@ Template: index
             <p>Here are some of the solutions I've been honored to be able to provide for my clients. You can get a good idea of the kind of work I do by looking at some of these case studies.</p>
             <article class="case" data-case="1">
                 <h1>A Quick Fix with Out-of-the-Box Solutions</h1>
-                <div class="more-less"><span role="button">Read</span></div>
+                <div class="more-less">
+                    <span role="button">Read</span>
+                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                </div>
             </article>
             <article class="case" data-case="2">
                 <h1>A Custom WordPress Theme with an Innovative Approach to Responsive Web Design</h1>
-                <div class="more-less"><span role="button">Read</span></div>
+                <div class="more-less">
+                    <span role="button">Read</span>
+                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                </div>
             </article>
             <article class="case" data-case="3">
                 <h1>A Staff Page with Layered Information</h1>
-                <div class="more-less"><span role="button">Read</span></div>
+                <div class="more-less">
+                    <span role="button">Read</span>
+                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                </div>
             </article>
             <article class="case" data-case="4">
                 <h1>A Custom Plugin for a 'Drag-n-Drop' Theme</h1>
-                <div class="more-less"><span role="button">Read</span></div>
+                <div class="more-less">
+                    <span role="button">Read</span>
+                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                </div>
             </article>
             <article class="case" data-case="5">
                 <h1>A Performance Audit for a Busy NGO</h1>
-                <div class="more-less"><span role="button">Read</span></div>
+                <div class="more-less">
+                    <span role="button">Read</span>
+                    <p class="loading"><img src="" alt="" href="../../assets/Loading_icon-translucent.gif"></p>
+                </div>
             </article>
         </div>
     </div>
