@@ -27,7 +27,7 @@
                 // fetch case{ parent's data-casestudy number }.html
                 console.log(this.parentNode.parentNode.dataset.casestudy);
                 var xhr = new XMLHttpRequest(),
-                    url = "includes/case" + this.parentNode.parentNode.dataset.casestudy + "html"
+                    url = "themes/default/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html"
                 ;
                 // xhr.addEventListener( 'progress', progressHandler );
                 xhr.addEventListener( 'load', loadHandler );
@@ -37,7 +37,7 @@
                 xhr.onreadystatechange = function(data) {
                     //
                 }
-                xhr.send();
+                xhr.send(); console.log(xhr);
 
             }, false );
         };
