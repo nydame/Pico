@@ -24,10 +24,28 @@
         var readButtons = document.querySelectorAll('.more-less [role="button"]');
         for (var i = readButtons.length; i > 0; i--) {
             readButtons[i-1].addEventListener( 'click', function() {
-                // fetch case{ parent's data-case }.html
+                // fetch case{ parent's data-casestudy number }.html
                 console.log(this.parentNode.parentNode.dataset.casestudy);
+                var xhr = new XMLHttpRequest(),
+                    url = "includes/case" + this.parentNode.parentNode.dataset.casestudy + "html"
+                ;
+                // xhr.addEventListener( 'progress', progressHandler );
+                xhr.addEventListener( 'load', loadHandler );
+                // xhr.addEventListener( 'error', errorHandler );
+                // xhr.addEventListener( 'abort', abortHandler );
+                xhr.open('GET', url, true);
+                xhr.onreadystatechange = function(data) {
+                    //
+                }
+                xhr.send();
+
             }, false );
         };
+
+        function loadHandler(ev) {
+            //
+        }
+
     })();
 </script>
 {% endblock %}
