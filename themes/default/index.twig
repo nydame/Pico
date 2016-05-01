@@ -29,10 +29,10 @@
                 var xhr = new XMLHttpRequest(),
                     url = "themes/default/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html"
                 ;
-                // xhr.addEventListener( 'progress', progressHandler );
+                xhr.addEventListener( 'progress', progressHandler );
                 xhr.addEventListener( 'load', loadHandler );
-                // xhr.addEventListener( 'error', errorHandler );
-                // xhr.addEventListener( 'abort', abortHandler );
+                xhr.addEventListener( 'error', errorHandler );
+                xhr.addEventListener( 'abort', abortHandler );
                 xhr.open('GET', url, true);
                 xhr.onreadystatechange = function(data) {
                     //
@@ -42,8 +42,20 @@
             }, false );
         };
 
+        function progressHandler(ev) {
+            console.log("progress");
+        }
+
         function loadHandler(ev) {
-            //
+            console.log("load");
+        }
+
+        function errorHandler(ev) {
+            console.log("error");
+        }
+
+        function abortHandler(ev) {
+            console.log("abort");
         }
 
     })();
