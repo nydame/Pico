@@ -26,7 +26,7 @@
 
         for (var i = readButtons.length; i > 0; i--) {
             readButtons[i-1].addEventListener( 'click', function() {
-                var url = {{ theme_url }} + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
+                var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
                     parentDiv = this.parentNode;
                 makeReq( 'GET', url, parentDiv ); console.log("URL is " + url);
 
