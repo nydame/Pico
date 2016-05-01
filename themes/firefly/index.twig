@@ -28,6 +28,7 @@
             readButtons[i-1].addEventListener( 'click', function() {
                 var url = "{{ theme_url }}" + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html",
                     parentDiv = this.parentNode;
+                alert("click!");
                 if ( parentDiv.classList.contains('active') ) {
                     deactivateAll(); 
                 } else if ( parentDiv.classList.contains('loaded') ) {
