@@ -27,7 +27,7 @@
                 // fetch case{ parent's data-casestudy number }.html
                 console.log(this.parentNode.parentNode.dataset.casestudy);
                 // var url = "themes/default/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html";
-                var url = trim({{ theme_url }}) + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html";
+                var url = {{ theme_url|escape('js') }} + "/includes/case" + this.parentNode.parentNode.dataset.casestudy + ".html";
                 makeReq( 'GET', url );
 
             }, false );
