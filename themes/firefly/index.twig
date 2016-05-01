@@ -30,12 +30,17 @@
                     parentDiv = this.parentNode;
                 alert("click!");
                 if ( parentDiv.classList.contains('active') ) {
+                    // if "on" then turn "off"
                     deactivateAll(); 
                 } else if ( parentDiv.classList.contains('loaded') ) {
+                    // if not "on", but content is just hidden, hide others and show it
+                    deactivateAll();
                     activateParent( parentDiv );
                 } else if ( parentDiv.classList.contains('waiting') ) {
+                    // virgin click being handled, so do nothing
                     return;
                 } else {
+                    // virgin click!
                     makeReq( 'GET', url, parentDiv ); console.log("URL is " + url);
                 }
 
