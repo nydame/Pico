@@ -392,10 +392,10 @@ nav li.active a {
 .more-less p {
     background-color: #fff;
     color: #333;
+    display: none;
     text-align: left;
 }
 .more-less p.loading {
-    display: none;
     text-align: center;
 }
 .more-less.waiting p.loading {display: block;}
@@ -403,6 +403,8 @@ nav li.active a {
     max-width: 125px;
     width: 33%;
 }
+.more-less.active p {display: block;}
+.more-less.active p.loading {display:none;}
 #footer {
     background: #757090;
     color: #C0C0C0;
