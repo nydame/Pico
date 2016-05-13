@@ -476,6 +476,7 @@ nav li.active a {
     .more-less {
         margin-left: 0;
         max-width: 100%;
+        transition: height ease-out 0.8s;
         width: auto;
     }
 }
@@ -508,6 +509,7 @@ nav li.active a {
         text-align: right;
     }
     .more-less p {
+        margin-bottom: 0;
         padding: 10%;
     }
 
