@@ -369,14 +369,17 @@ nav li.active a {
     background-color: transparent;
     border-bottom: 1px solid currentColor;
     margin-left: -3.4em;
+    max-height: 4em;
     padding: 0.5em 1em;
     text-align: right;
-    transition: height ease-out 0.8s;
+    transition: max-height ease-out 0.8s;
     width: 110%;
 }
 .more-less.active,
 .more-less.waiting {
     background-color: #333;
+    max-height: 100em;
+    overflow-y: auto;
 }
 .more-less [role="button"] {
     background-color: transparent;
@@ -509,7 +512,7 @@ nav li.active a {
         text-align: right;
     }
     .more-less p {
-        padding: 10%;
+        padding: 7.5%;
     }
 
 }
