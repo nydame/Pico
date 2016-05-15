@@ -29,7 +29,7 @@ Template: index
                 </div>
             </article>
             <article class="case" data-casestudy="3">
-                <h1>A Staff Page with Layered Information</h1>
+                <h1>A Staff Page with Layers of Information</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
