@@ -22,7 +22,9 @@
 <script>
     (function() {
         var readButtons = document.querySelectorAll('.more-less [role="button"]'),
-            allParentDivs = document.querySelectorAll('.more-less');
+            allParentDivs = document.querySelectorAll('.more-less'),
+            OFFTEXT = 'Read',
+            ONTEXT = 'X';
 
         for (var i = readButtons.length; i > 0; i--) {
             readButtons[i-1].addEventListener( 'click', function() {
@@ -104,20 +106,25 @@
         }
 
         function deactivateAll() {
+            // go through all of the 'more-less' divs
             for (var i = allParentDivs.length; i > 0; i--) {
+                // remove class 'waiting'
                 if ( allParentDivs[i-1].classList.contains("waiting") ) {
                     allParentDivs[i-1].classList.remove("waiting");
                 }
+                // remove class 'active'
                 if ( allParentDivs[i-1].classList.contains("active") ) {
                     allParentDivs[i-1].classList.remove("active");
                 }
+                // change button text to OFFTEXT
+                allParentDivs[i-1].querySelector('[role="button"]').innerHTML = OFFTEXT;
             }
         }
 
         function switchButtonText( aNode ) {
             var currentText = aNode.innerHTML;
-            if ( currentText === 'Read' ) { aNode.innerHTML = 'X'; }
-            if ( currentText === 'X' ) { aNode.innerHTML = 'Read'; }
+            if ( currentText === OFFTEXT ) { aNode.innerHTML = ONTEXT; }
+            if ( currentText === ONTEXT ) { aNode.innerHTML = OFFTEXT; }
         }
 
     })();
