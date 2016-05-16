@@ -39,7 +39,7 @@
                     activateParent( parentDiv );
                     switchButtonTextOn( this );
                 } else if ( parentDiv.classList.contains('waiting') ) {
-                    // virgin click being handled, so do nothing
+                    // click is already being handled, so do nothing
                     return;
                 } else {
                     // virgin click!
@@ -66,7 +66,6 @@
 
         function progressHandler(ev) {
             var container = this.container;
-            console.log("progress");
             prepareParent( container );
         }
 
@@ -99,9 +98,11 @@
         }
 
         function activateParent( aNode ) {
-            // note that class "loaded" is never removed
+            // note that class "loaded" is never removed once added
             aNode.classList.add("active");
             aNode.classList.add("loaded");
+            // change butotn text to ONTEXT
+            switchButtonTextOn( aNode.querySelector( '[role="button"]' ) );
         }
 
         function deactivateAll() {
@@ -116,7 +117,7 @@
                     allParentDivs[i-1].classList.remove("active");
                 }
                 // change button text to OFFTEXT
-                switchButtonTextOff( allParentDivs[i-1].querySelector('[role="button"]') );
+                switchButtonTextOff( allParentDivs[i-1].querySelector( '[role="button"]' ) );
             }
         }
 
