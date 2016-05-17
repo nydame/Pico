@@ -456,7 +456,6 @@ nav li.active a {
 }
 .typeform-widget {
     height: auto;
-    height: 100vh;
     width: 100%;
 }
 
