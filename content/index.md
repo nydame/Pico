@@ -10,8 +10,8 @@ Template: index
     <div class="inner">
         <div class="welcome-wrap">
             <h2>Portfolio: 5 Case Studies</h2>
-            <p>The emphasis here at Firefly Web Services is on problem solving. Putting up a website that's nice to look at is, well, nice, but it's just the opening salvo. If your visitors are frustrated by excessive load times, or don't understand how to find what they're looking for, you've already lost the battle.</p>
-            <p>Here are some of the solutions I've been honored to be able to provide for my clients. You can get a good idea of the kind of work I do by looking at some of these case studies.</p>
+            <p>The emphasis here at Firefly Web Services is on problem solving. Putting up a website that's nice to look at is, well, nice, but it's just the opening salvo. If your visitors are frustrated by excessive load times, or don't understand what you have to offer, you've already lost the battle.</p>
+            <p>Here are some of the solutions I've been honored to be able to provide for my clients. You can get a good idea of the kind of work I do by checking out some of these case studies.</p>
             <article class="case" data-casestudy="1">
                 <h1>A Quick Fix with Out-of-the-Box Solutions</h1>
                 <div class="more-less">
