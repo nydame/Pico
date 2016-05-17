@@ -460,7 +460,7 @@ nav li.active a {
     width: 100%;
 }
 .typeform-widget .attachment img {
-    max-width: 60% !important; /*needed to overrule inline style*/
+    width: 60% !important; /*needed to overrule inline style*/
 }
 
 /* Misc Styles
