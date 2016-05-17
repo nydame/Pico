@@ -454,6 +454,11 @@ nav li.active a {
 #footer a.icon-link:hover {
     border-bottom: none;
 }
+.typeform-widget {
+    height: auto;
+    height: 100vh;
+    width: 100%;
+}
 
 /* Misc Styles
 /*---------------------------------------------*/
