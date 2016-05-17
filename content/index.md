@@ -37,7 +37,7 @@ Template: index
                 </div>
             </article>
             <article class="case" data-casestudy="4">
-                <h1>A Custom Plugin for a 'Drag-n-Drop' Theme</h1>
+                <h1>Getting Data Architecture Right</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
@@ -45,7 +45,7 @@ Template: index
                 </div>
             </article>
             <article class="case" data-casestudy="5">
-                <h1>A Performance Audit for a Busy NGO</h1>
+                <h1>A 3-Month Sprint as Lead Front-End Dev on a Rails App</h1>
                 <div class="more-less">
                     <span role="button">Read</span>
                     <p class="loading"><img src="../../assets/Loading_icon-translucent.gif" alt="animated loading indicator" /></p>
