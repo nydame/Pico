@@ -16,7 +16,7 @@ Template: page
             </article>
             <article>
                 <h1>How much do you charge?</h1>
-                <p>For smaller projects (20 hours or less), $65/hour. A flat fee can be negotiated for big projects.</p>
+                <p>For smaller projects (20 hours or less), $75/hour. A flat fee can be negotiated for big projects.</p>
             </article>
             <article>
                 <h1>Is this website built on WordPress?</h1>
