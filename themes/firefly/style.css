@@ -459,6 +459,9 @@ nav li.active a {
     min-height: 100vh;
     width: 100%;
 }
+.typeform-widget .attachment img {
+    max-width: 60%;
+}
 
 /* Misc Styles
 /*---------------------------------------------*/
