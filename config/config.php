@@ -18,7 +18,7 @@
  */
 $config['site_title'] = 'Firefly Web Services';              // Site title
 $config['base_url'] = '';                    // Override base URL (e.g. http://example.com)
-$config['rewrite_url'] = true;               // A boolean indicating forced URL rewriting
+$config['rewrite_url'] = null;               // A boolean indicating forced URL rewriting
 
 /*
  * THEME
