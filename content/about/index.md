@@ -13,7 +13,7 @@ Template: page
             <article>
                 <h1>Aren't you just one person?</h1>
                 <p>Mostly yes. Firefly Web Services is mainly <a href="https://www.linkedin.com/in/feliciabetancourt" title="Felicia's profile at LinkedIn">Felicia Betancourt</a>, formerly a staff scientist at Lawrence Berkeley Laboratory, now a programmer. Nevertheless, she often collaborates with designers, user experience gurus, project managers and other experts on larger-scale projects.</p>
-                <p>By the way, more of Felicia's work or thoughts can be found on <a href="//twitter.com/nydame">Twitter</a>, <a href="//github.com/nydame">GitHub</a> and <a href="//codepen.io/nydame">CodePen</a>.</p>
+                <p>By the way, more of Felicia's work can be found on <a href="//twitter.com/nydame">Twitter</a>, <a href="//github.com/nydame">GitHub</a> and <a href="//codepen.io/nydame">CodePen</a>.</p>
             </article>
             <article>
                 <h1>How much do you charge?</h1>
