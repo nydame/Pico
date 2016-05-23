@@ -528,4 +528,7 @@ nav li.active a {
     .more-less p {
         padding: 15%;
     }
+    .header-section1-wrap {
+        padding-bottom: 15em;
+    }
 }
