@@ -322,7 +322,7 @@ nav li.active a {
 }
 .header-section1-wrap {/*
     background: url('../../assets/hazy-water.jpg') rgba(175,225,218, 0.25) top center;*/
-    background: url('https://go-firefly.imgix.net/hazy-water.jpg') rgba(175,225,218, 0.25) top center;
+    background: url('https://res.cloudinary.com/firefly-web-services/image/upload/v1589415232/Firefly%20Web%20Services/romain-briaux-yD3PXDV7Sjc-unsplash.jpg') rgba(175,225,218, 0.25) top center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 6.8em;
